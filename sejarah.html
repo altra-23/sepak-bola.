@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sejarah Klub Sepak Bola</title>
+
+<style>
+    /* RESET */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* BODY */
+    body {
+        font-family: Arial, sans-serif;
+        background: #ffffff;
+        color: white;
+    }
+
+    /* HEADER */
+    header {
+        background: #c90000;
+        padding: 20px 20px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    .logo {
+        width: 60px;
+        border-radius: 12px;
+    }
+
+    h1 {
+        flex: 1;
+        font-size: 30px;    
+    }
+
+    /* HAMBURGER */
+    .hamburger {
+        font-size: 28px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* MENU HAMBURGER */
+    .menu {
+        position: fixed;
+        top: 0;
+        right: -220px;
+        width: 220px;
+        height: 100%;
+        background: #f00000;
+        padding: 60px 20px;
+        transition: 0.3s;
+        z-index: 20;
+    }
+
+    .menu a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
+
+    .menu.active {
+        right: 0;
+    }
+
+    /* OVERLAY */
+    .overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.5);
+        display: none;
+        z-index: 15;
+    }
+
+    .overlay.active {
+        display: block;
+    }
+
+    /* JUDUL */
+    h2 {
+        text-align: center;
+        margin: 30px 0 15px;
+        font-size: 26px;
+        color: #ff3b3b;
+        text-shadow: 0 0 12px red;
+    }
+
+    h3 {
+        margin-bottom: 10px;
+        color: #ffdfdf;
+        text-shadow: 0 0 10px red;
+    }
+
+    /* SECTION / KONTEN */
+    .section {
+        padding: 20px;
+        margin-bottom: 30px;
+        background: #000000;
+        border-radius: 15px;
+        width: 90%;
+        margin: 0 auto 40px;
+        box-shadow: 0 0 18px rgba(255,0,0,0.4);
+    }
+
+    .section p {
+        line-height: 1.7;
+        margin-bottom: 15px;
+    }
+
+    /* GRID FOTO / PEMAIN */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+        gap: 20px;
+        margin-top: 15px;
+    }
+
+    .card img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 8px;
+        cursor: pointer;
+    }
+
+   
+
+    /* VIDEO */
+    .videos {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    video {
+        width: 100%;
+        max-width: 1000px;
+        margin: 10px;
+        border-radius: 12px;
+        
+        transition: 0.3s;
+    }    
+    footer {
+    background: #d40000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+</style>
+</head>
+<body>
+<header>
+    <img src="img/download__2_-removebg-preview (1).png" class="logo" alt="Logo">
+    <h1>Sepak bola</h1>
+    <button id="hamburger" class="hamburger">☰</button>
+</header>
+
+<!-- OVERLAY -->
+<div id="overlay" class="overlay"></div>
+
+<!-- MENU HAMBURGER -->
+<nav id="menu" class="menu">
+    <a href="index.html">Tentang</a>
+    <a href="Halaman.html">Beranda</a>
+    <a href="Tim.html">Tim</a>
+    <a href="sejarah.html">Sejarah</a>
+    <a href="form.html">Form</a>
+</nav>
+
+<h2>Sejarah Klub Sepak Bola Dunia</h2>
+
+<!-- ================= MAN UNITED ================= -->
+<div class="section">
+    <h3>KING Manchester United</h3>
+    <div class="grid">
+        <div class="card">
+            <img src="img/trophies_1990-ashx.jpeg" alt="">
+            <p>SQUAD Manchester united 1990</p>
+        </div>
+        <div class="card">
+            <img src="img/Piala Manchester united.jpg" alt="">
+            <p>Sir Alex Ferguson membawa trofi</p>
+        </div>
+    </div>
+    <div class="videos">
+        <video controls>
+            <source src="img/era1990.mp4" type="video/mp4">
+        </video>
+    </div>
+</div>
+
+<!-- ================= REAL MADRID ================= -->
+<div class="section">
+    <h3>Real Madrid</h3>
+    <div class="grid">
+        <div class="card">
+            <img src="img/2025.jpg" alt="">
+            <p>Skuad Real madrid 2025/2026 </p>
+        </div>
+        <div class="card">
+            <img src="img/-Real_Madrid_10.jpg" alt="">
+            <p>Perayaan Liga Champions</p>
+        </div>
+    </div>
+    <div class="videos">
+        <video controls>
+            <source src="img/Download (2).mp4" type="video/mp4">
+            <P> squad real madrid 2017</P>
+        </video>
+    </div>
+</div>
+
+<!-- ================= AC MILAN ================= -->
+<div class="section">
+    <h3>AC Milan</h3>
+    <div class="grid">
+        <div class="card">
+            <img src="img/Netsa x maldini.jpg" alt="">
+            <p>Maldini & Nesta</p>
+        </div>
+        <div class="card">
+            <img src="img/squad ac milan 2007.jpg" alt="">
+            <p>Skuad Milan era 2007</p>
+        </div>
+    </div>
+    <div class="videos">
+        <video controls>
+            <source src="img/Download (4).mp4" type="video/mp4">
+        </video>
+    </div>
+</div>
+<footer>
+   Alfitra Ersa Ramadahan 2005
+</footer>
+
+
+<script src="index.js"></script>
+</body>
+</html>

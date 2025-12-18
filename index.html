@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sepak Bola</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: #ff0000;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    width: 70px;
+    border-radius: 10px;
+}
+
+header h1 {
+    flex: 1;
+    font-size: 26px;
+}
+
+/* ===== HAMBURGER ===== */
+.hamburger {
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* ===== MENU ===== */
+.menu {
+    position: fixed;
+    top: 0;
+    right: -220px;
+    width: 220px;
+    height: 100%;
+    background: #ff0000;
+    padding: 60px 20px;
+    transition: 0.3s;
+    z-index: 20;
+}
+
+.menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.menu.active {
+    right: 0;
+}
+
+/* ===== OVERLAY ===== */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 15;
+}
+
+.overlay.active {
+    display: block;
+}
+
+/* ===== KONTEN ===== */
+.content {
+    display: flex;
+    gap: 20px;
+    background: white;
+    margin: 20px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.foto {
+    width: 600px;
+    border-radius: 10px;
+}
+
+/* ===== TEKS ===== */
+.story h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+    color: #d40000;
+}
+
+.story h3 {
+    font-size: 26px;
+    margin: 25px 0 10px;
+    color: #b30000;
+}
+
+.story p {
+    font-size: 18px;
+    line-height: 1.9;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.story .intro {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #d40000;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    margin-top: 20px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .foto {
+        margin: 0 auto;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="img/download__2_-removebg-preview (1).png" class="logo">
+    <h1>Sepak Bola</h1>
+    <button id="hamburger" class="hamburger">☰</button>
+</header>
+
+<div id="overlay" class="overlay"></div>
+
+<nav id="menu" class="menu">
+    <a href="index.html">Tentang<a>
+    <a href="Halaman.html">Beranda</a>
+    <a href="Tim.html">Tim</a>
+    <a href="sejarah.html">Sejarah</a>
+    <a href="form.html">Form</a>
+</nav>
+
+<div class="content">
+    <img src="img/Lagi main sepak bola.jpg" class="foto" alt="Sepak Bola">
+
+    <div class="text story">
+        <h2>Sepak Bola</h2>
+
+        <p class="intro">
+            Sepak bola merupakan olahraga paling populer di dunia yang dimainkan oleh dua tim,
+            masing-masing beranggotakan sebelas pemain. Olahraga ini menuntut kekuatan fisik,
+            kecerdasan strategi, serta kerja sama tim yang solid.
+        </p>
+
+        <p>
+            Tujuan utama dalam permainan sepak bola adalah mencetak gol dengan memasukkan bola
+            ke gawang lawan menggunakan kaki atau anggota tubuh lainnya, kecuali tangan.
+            Hanya penjaga gawang yang diperbolehkan menyentuh bola dengan tangan di area penalti.
+        </p>
+
+        <h3>Aturan Dasar Permainan</h3>
+
+        <p>
+            Pertandingan sepak bola berlangsung selama dua babak, masing-masing 45 menit,
+            dengan waktu istirahat di antara kedua babak tersebut. Permainan dipimpin oleh
+            seorang wasit yang bertugas memastikan jalannya pertandingan sesuai aturan.
+        </p>
+
+        <p>
+            Dalam sepak bola terdapat berbagai pelanggaran seperti handball, offside,
+            dan pelanggaran fisik. Setiap pelanggaran dapat berakibat tendangan bebas,
+            penalti, atau kartu kuning dan merah.
+        </p>
+
+        <h3>Manfaat Bermain Sepak Bola</h3>
+
+        <p>
+            Bermain sepak bola memiliki banyak manfaat, baik dari segi fisik maupun mental.
+            Olahraga ini dapat meningkatkan daya tahan tubuh, kekuatan otot, serta kesehatan
+            jantung.
+        </p>
+
+        <p>
+            Selain itu, sepak bola juga melatih disiplin, sportivitas, kepemimpinan,
+            dan kemampuan bekerja sama dalam tim. Nilai-nilai tersebut sangat penting
+            dalam kehidupan sehari-hari.
+        </p>
+
+        <h3>Sepak Bola di Dunia</h3>
+
+        <p>
+            Sepak bola tidak hanya menjadi olahraga, tetapi juga telah berkembang menjadi
+            bagian dari budaya dan identitas suatu negara. Turnamen besar seperti Piala Dunia,
+            Liga Champions, dan liga-liga top Eropa selalu menarik perhatian jutaan penggemar.
+        </p>
+
+        <p>
+            Melalui sepak bola, orang-orang dari berbagai latar belakang dapat bersatu,
+            merasakan kegembiraan, kesedihan, dan kebanggaan bersama dalam satu permainan.
+        </p>
+    </div>
+</div>
+
+<footer>
+    Alfitra Ersa Ramadahan 2005
+</footer>
+
+<script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Kontak</title>
+
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+
+        /* HEADER */
+        header {
+            background: #ff0000;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            border-radius: 0 0 12px 12px;
+        }
+
+        .logo {
+            width: 70px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            flex: 1;
+        }
+
+        /* HAMBURGER */
+        .hamburger {
+            font-size: 28px;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* MENU */
+        .menu {
+            position: fixed;
+            top: 0;
+            right: -220px;
+            width: 220px;
+            height: 100%;
+            background: #b00000;
+            padding: 60px 20px;
+            transition: 0.3s;
+            z-index: 20;
+        }
+
+        .menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .menu.active {
+            right: 0;
+        }
+
+        /* OVERLAY */
+        .overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            display: none;
+            z-index: 15;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        /* FORM WRAPPER (BIAR TENGAH & RAPI) */
+        .form-wrapper {
+            min-height: calc(100vh - 100px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* FORM */
+        form {
+            width: 100%;
+            max-width: 420px;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: 6px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            margin-top: 5px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            width: 48%;
+            padding: 10px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            color: white;
+        }
+
+        input[type="submit"] {
+            background: #007bff;
+        }
+
+        input[type="reset"] {
+            background: #dc3545;
+        }
+
+        input[type="submit"]:hover {
+            background: #0056b3;
+        }
+
+        input[type="reset"]:hover {
+            background: #a71d2a;
+        }
+        footer {
+       background: #d40000;
+       color: white;
+       text-align: center;
+       padding: 10px;
+}
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <img src="img/Bola.png" class="logo" alt="Logo">
+        <h1>Sepak Bola</h1>
+        <button id="hamburger" class="hamburger">☰</button>
+    </header>
+
+    <!-- OVERLAY -->
+    <div id="overlay" class="overlay"></div>
+
+    <!-- MENU -->
+    <nav id="menu" class="menu">
+        <a href="index.html">Tentang</a>
+        <a href="Halaman.html">Beranda</a>
+        <a href="Tim.html">Tim</a>
+        <a href="sejarah.html">Sejarah</a>
+        <a href="form.html">Form</a>
+    </nav>
+
+    <!-- FORM -->
+    <div class="form-wrapper">
+        <form>
+            <table>
+                <tr>
+                    <td>Nama</td>
+                    <td>:</td>
+                    <td><input type="text" placeholder="Masukkan nama"></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td>:</td>
+                    <td><input type="password" placeholder="Masukkan password"></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>:</td>
+                    <td><input type="email" placeholder="contoh@email.com"></td>
+                </tr>
+                <tr>
+                    <td>Jenis Kelamin</td>
+                    <td>:</td>
+                    <td>
+                        <input type="radio" name="jk"> Laki-Laki
+                        <input type="radio" name="jk"> Perempuan
+                    </td>
+                </tr>
+                <tr>
+                    <td>Upload Foto</td>
+                    <td>:</td>
+                    <td><input type="file"></td>
+                </tr>
+                <tr>
+                    <td colspan="3" align="center">
+                        <input type="submit" value="Kirim">
+                        <input type="reset" value="Batal">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <footer>
+   Alfitra Ersa Ramadahan 2005
+</footer>
+
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const menu = document.getElementById('menu');
+const overlay = document.getElementById('overlay');
+
+hamburger.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    overlay.classList.toggle('active');
+});
+
+overlay.addEventListener('click', () => {
+    menu.classList.remove('active');
+    overlay.classList.remove('active');
+});
+</script>
+
+</body>
+</html>
